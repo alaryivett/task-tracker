@@ -1,0 +1,28 @@
+.backlog
+	box-shadow: 0 0 5px 0 #c9c9c9
+	border-radius: 5px
+	background-color: white
+	flex-basis: 30%
+	padding: 10px
+	@media (max-width: 950px)
+		position: absolute
+		top: 30px
+		right: 0
+		width: 100%
+	&__search
+		border: 1px solid $gray
+		margin-bottom: 10px
+		width: 100%
+		border-radius: 5px
+		padding: 10px
+		font-family: inherit
+		font-size: inherit
+		&:focus
+			outline-color: $blue
+	&__empty-message
+		text-align: center
+		padding-top: 40px
+.hidden
+	display: block
+	@media (max-width: 950px)
+		display: none

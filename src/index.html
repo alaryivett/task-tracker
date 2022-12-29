@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>TaskTracker</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+</head>
+<body>
+	<header class="header">
+		<button type="button" id="toggle-backlog-button" class="header__toggle-backlog-button">Показать бэклог</button>
+		<h1>
+			<span>TASK</span>
+			<span>TRACKER</span>
+		</h1>
+
+		<div class="header__buttons">
+			<button id="button-add-user">
+				<img src="add.svg" alt="add-user">
+				<span>Добавить пользователя</span>
+			</button>
+
+			<button id="button-add-task">
+				<img src="add.svg" alt="add-task">
+				<span>Добавить задачу</span>
+			</button>
+		</div>
+	</header>
+
+	<main>
+		<section id='tracker' class="tracker">
+			<h2>Трекер задач</h2>
+			<div class="tracker__header">
+				<button id="button-back" class="tracker__header-button">
+					<img src="arrow.svg" alt="previous-month">
+					<span></span>
+				</button>
+
+				<div class="tracker__header-date">
+					<div id="year"></div>
+					<div id="month"></div>
+				</div>
+
+				<button id="button-next" class="tracker__header-button">
+					<span></span>
+					<img src="arrow.svg" alt="next-month">
+				</button>
+			</div>
+
+			<div class="tracker__calendar">
+				<div class="tracker__calendar-header">
+					<div class="tracker__calendar-header-cell"></div>
+
+					<div id='calendar-header' class="tracker__calendar-header-body scrolled"></div>
+				</div>
+
+				<div id='calendar-body' class="tracker__calendar-body"></div>
+			</div>
+		</section>
+
+		<section id='backlog' class="backlog hidden">
+			<h2>Бэклог</h2>
+			<input id='backlog-search' type="text" class="backlog__search" placeholder="Поиск">
+		</section>
+	</main>
+</body>
+</html>

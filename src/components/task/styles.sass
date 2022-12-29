@@ -1,0 +1,112 @@
+.task
+	$task: &
+	&_backlog
+		cursor: pointer
+		display: flex
+		flex-direction: column
+		gap: 10px
+		padding: 10px
+		border-radius: 5px
+		box-shadow: 0 0 5px 0 #c9c9c9
+		margin-bottom: 5px
+		background-color: white
+		color: $darkblue
+		&:hover
+			#{$task}__info
+				#{$task}__edit-button
+					visibility: visible
+		&:last-child
+			margin-bottom: 0
+		#{$task}__info
+			display: flex
+			justify-content: space-between
+			align-items: flex-start
+			#{$task}__icons
+				display: flex
+				gap: 5px
+			#{$task}__edit-button
+				background-color: transparent
+				border: none
+				border-radius: 50%
+				z-index: 500
+				padding: 3px
+				margin-top: -5px
+				visibility: hidden
+				cursor: pointer
+				&:hover
+					background-color: $lightblue
+		#{$task}__name
+			font-weight: 600
+	&_tracker
+		cursor: pointer
+		background-color: $blue
+		padding: 10px
+		color: $white
+		font-weight: 700
+		height: 100%
+		img
+			height: 16px
+			width: 16px
+		span
+			display: block
+			overflow: hidden
+			white-space: nowrap
+			text-overflow: ellipsis
+		#{$task}__info
+			display: flex
+			gap: 5px
+			margin-bottom: 8px
+		#{$task}__description
+			font-weight: 400
+			font-size: 13px
+			margin-top: 5px
+		&:hover
+			color: $lightblue
+			#{$task}__hint
+				display: block
+				animation: show 0.2s linear 1 forwards
+	&__hint
+		border: 1px solid $blue
+		background-color: $lightblue
+		position: absolute
+		display: none
+		top: 0
+		right: 0
+		z-index: 10
+		display: none
+		box-shadow: 10px 5px 10px -5px $gray
+		transform: translateX(100%)
+		padding: 20px
+		font-weight: 400
+		color: $blue
+		img
+			height: 16px
+			width: 16px
+		span
+			display: block
+			padding: 5px 0
+		&-name
+			color: $darkblue
+			font-size: 20px
+			padding-bottom: 10px
+			font-weight: 700
+		&-description
+			font-weight: 700
+		&-status
+			display: flex !important
+			align-items: end
+			gap: 5px
+		&-order
+			display: flex !important
+			align-items: end
+			gap: 5px
+	&_draggable
+		position: absolute
+		z-index: 1000
+		
+
+@keyframes show
+	from
+		transform: translateX(0)
+	to
+		transform: translateX(100%)

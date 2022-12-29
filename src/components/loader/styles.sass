@@ -1,0 +1,20 @@
+.loader
+	position: fixed
+	top: 0
+	height: 100%
+	width: 100%
+	background-color: #def2f1
+	display: flex
+	align-items: center
+	justify-content: center
+	flex-direction: column
+	img
+		animation: rotate 2s linear infinite
+	&__message
+		color: #3aafa9
+		font-weight: 600
+		padding: 20px
+
+@keyframes rotate
+	to
+		transform: rotate(360deg)
